@@ -38,13 +38,15 @@ choose = raw_input('\033[5m' + "Choose some option: " + '\033[0m')
 if(choose == "1"):
     tools()
     print('\033[32m' + '\nHcxdumptool and Hcxtools installed successfully!\n' + '\033[0m')
+    print('\nDone! Now im quitting...\n')
 elif(choose == "2"):
     pyrit()
     print('\033[32m' + '\nPyrit installed successfully! \n' + '\033[0m')
+    print('\nDone! Now im quitting...\n')
 elif(choose == "3"):
     tools()
     pyrit()
     print('\033[32m' + '\nBoth tools installed successfully!\n' + '\033[0m')
-else:
     print('\nDone! Now im quitting...\n')
+else:
     exit()
