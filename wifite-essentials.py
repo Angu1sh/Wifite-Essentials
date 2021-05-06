@@ -15,33 +15,36 @@ menu = '''
 Choose the application you want to install 
 (1)  Install Hcxdumptool & Hcxtools
 (2)  Install Pyrit
+(3)  Install Both Tools
 
-[Fix your date on Kali before install it. Use date --set YYYY-MM-DD and HH:MM:SS]
+[Fix your date on Kali before install it. Use date --set YYYY-MM-DD]
 '''
 print('\033[33m' + menu)
 
 def tools():
+    print('\033[32m' + '\nInstalling Hcxdumptool & Hcxtools\n' + '\033[0m')
     os.system('apt-get install libcurl4-openssl-dev libssl-dev pkg-config zlib1g-dev libpcap-dev -y && apt-get update')
     os.system('git clone https://github.com/ZerBea/hcxdumptool.git && cd hcxdumptool && make && make install && cd ..')
     os.system('git clone https://github.com/ZerBea/hcxtools.git && cd hcxtools && make && make install && cd ..')
-    print('\n' + "Installing Hcxdumptool & Hcxtools " + '\n')
-
-
+    
 def pyrit():
+    print('\033[32m' + '\nInstalling Pyrit\n' + '\033[0m')
     os.system("git clone https://github.com/hacker3983/how-to-install-pyrit-on-kali-linux-2020.1a pyrit-installer && cd pyrit-installer && sudo bash install.sh")
-    print('\n' + "Installing Pyrit" + '\n')
-
-
+    
 
 choose = raw_input('\033[5m' + "Choose some option: " + '\033[0m')
 
 
 if(choose == "1"):
     tools()
-    print("Hcxdumptool and Hcxtools installed successfully! ")
+    print('\033[32m' + '\nHcxdumptool and Hcxtools installed successfully!\n' + '\033[0m')
 elif(choose == "2"):
     pyrit()
-    print("Pyrit installed successfully! ")
+    print('\033[32m' + '\nPyrit installed successfully! \n' + '\033[0m')
+elif(choose == "3"):
+    tools()
+    pyrit()
+    print('\033[32m' + '\nBoth tools installed successfully!\n' + '\033[0m')
 else:
-    print('Done! Now im quitting...')
+    print('\nDone! Now im quitting...\n')
     exit()
