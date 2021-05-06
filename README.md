@@ -6,6 +6,6 @@ Are you having some trouble or difficulty to install HcxTools/Hcxdumptools and P
 
 
 
-# Usage:
+# Usage
 * git clone https://github.com/Angu1sh/Wifite-Essentials && cd wifite-essentials
 * python wifite-essentials.py
