@@ -24,22 +24,24 @@ def tools():
     os.system('apt-get install libcurl4-openssl-dev libssl-dev pkg-config zlib1g-dev libpcap-dev -y && apt-get update')
     os.system('git clone https://github.com/ZerBea/hcxdumptool.git && cd hcxdumptool && make && make install && cd ..')
     os.system('git clone https://github.com/ZerBea/hcxtools.git && cd hcxtools && make && make install && cd ..')
-    print("Hcxdumptool and Hcxtools installed successfully! ")
+    print('\033[33m' + "Installing Hcxdumptool & Hcxtools ")
+
 
 def pyrit():
     os.system("git clone https://github.com/hacker3983/how-to-install-pyrit-on-kali-linux-2020.1a pyrit-installer && cd pyrit-installer && sudo bash install.sh")
-    print("Pyrit installed successfully! ")
+    print('\033[33m' + "Installing Pyrit" + '\033[0m')
+
 
 
 choose = raw_input('\033[5m' + "Choose some option: " + '\033[0m')
 
 
 if(choose == "1"):
-    print('\033[33m' + "Installing Hcxdumptool & Hcxtools ")
     tools()
+    print("Hcxdumptool and Hcxtools installed successfully! ")
 elif(choose == "2"):
-    print('\033[33m' + "Installing Pyrit" + '\033[0m')
     pyrit()
+    print("Pyrit installed successfully! ")
 else:
     print('Done! Now im quitting...')
     exit()
