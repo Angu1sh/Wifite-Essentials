@@ -24,12 +24,12 @@ def tools():
     os.system('apt-get install libcurl4-openssl-dev libssl-dev pkg-config zlib1g-dev libpcap-dev -y && apt-get update')
     os.system('git clone https://github.com/ZerBea/hcxdumptool.git && cd hcxdumptool && make && make install && cd ..')
     os.system('git clone https://github.com/ZerBea/hcxtools.git && cd hcxtools && make && make install && cd ..')
-    print('\033[33m' + "Installing Hcxdumptool & Hcxtools ")
+    print('\n' + "Installing Hcxdumptool & Hcxtools " + '\n')
 
 
 def pyrit():
     os.system("git clone https://github.com/hacker3983/how-to-install-pyrit-on-kali-linux-2020.1a pyrit-installer && cd pyrit-installer && sudo bash install.sh")
-    print('\033[33m' + "Installing Pyrit" + '\033[0m')
+    print('\n' + "Installing Pyrit" + '\n')
 
 
 
